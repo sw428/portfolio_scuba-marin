@@ -1,0 +1,49 @@
+@charset "UTF-8";
+:root {
+  --color-text: #333333;
+  --color-white: #ffffff;
+  --color-gray: #aaaaaa;
+  --color-main: #00a0e9;
+}
+
+body {
+  margin: 0;
+  font-family: "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* PC */
+.l-inner {
+  padding-inline: 16px;
+}
+
+.visible-sp {
+  display: none;
+}
+
+.visible-pc {
+  display: block;
+}
+
+/* SP */
+@media screen and (max-width: 640px) {
+  .visible-sp {
+    display: block;
+  }
+
+  .visible-pc {
+    display: none;
+  }
+}
