@@ -184,51 +184,60 @@
 
     <aside class="page-layout__side sidebar">
       <a class="sidebar__reservation" href="">
-        <img class="sidebar__reservation-image" src="img/reservation@2x.png" alt="">
+        <img class="sidebar__reservation-image" src="img/reservation@2x.png" alt="" width="335" height="64">
       </a>
 
       <section class="sidebar__section sidebar-movie">
         <h3 class="sidebar__ttl">体験の様子を見る</h3>
-        <iframe class="sidebar-movie__iframe" src="" frameborder="0"></iframe>
+        <iframe width="258" height="157" src="https://www.youtube.com/embed/Frdhx82g9mA?si=KZU06-9kKLtQ4MT_"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
 
       <section class="sidebar__section shop-info">
         <h3 class="sidebar__ttl">店舗案内</h3>
-        <img class="shop-info__image" src="img/shop@2x.png" alt="">
+        <img class="shop-info__image" src="img/shop@2x.png" alt="" width="258" height="172">
         <p class="shop-info__tel">098-XXX-XXXX</p>
         <p class="shop-info__address">沖縄県ＸＸＸＸＸＸＸＸＸＸＸ</p>
         <p class="shop-info__hours">営業時間：9:00～18:00</p>
       </section>
 
       <section class="sidebar__section staff-blog">
+        <h3 class="sidebar__ttl staff-blog__ttl">スタッフブログ</h3>
         <article class="staff-blog__item">
-          <h3 class="sidebar__ttl staff-blog__ttl">スタッフブログ</h3>
-          <p class="staff-blog__date">
+          <p class="staff-blog__date t-small-link">
             <time datetime="">20XX年3月1日</time>
           </p>
-          <a class="staff-blog__link" href="">スタッフブログタイトルダミーテキ ストスタッフブログタイトル</a>
+          <a class="staff-blog__link t-label-main" href="">スタッフブログタイトルダミーテキ ストスタッフブログタイトル</a>
         </article>
 
         <article class="staff-blog__item">
-          <h3 class="sidebar__ttl staff-blog__ttl">スタッフブログ</h3>
-          <p class="staff-blog__date">
+          <p class="staff-blog__date t-small-link">
             <time datetime="">20XX年3月1日</time>
           </p>
-          <a class="staff-blog__link" href="">スタッフブログタイトルダミーテキ ストスタッフブログタイトル</a>
+          <a class="staff-blog__link t-label-main" href="">スタッフブログタイトルダミーテキ ストスタッフブログタイトル</a>
         </article>
 
         <article class="staff-blog__item">
-          <h3 class="sidebar__ttl staff-blog__ttl">スタッフブログ</h3>
-          <p class="staff-blog__date">
+          <p class="staff-blog__date t-small-link">
             <time datetime="">20XX年3月1日</time>
           </p>
-          <a class="staff-blog__link" href="">スタッフブログタイトルダミーテキ ストスタッフブログタイトル</a>
+          <a class="staff-blog__link t-label-main" href="">スタッフブログタイトルダミーテキ ストスタッフブログタイトル</a>
         </article>
       </section>
 
-      <div class="sidebar__banner"></div>
-      <div class="sidebar__banner"></div>
-      <div class="sidebar__banner"></div>
+      <div class="sidebar__banners">
+        <div class="sidebar__banner t-label"><img src="img/banner1@2x.png" alt="" width="258" height="94"><span
+            class="banner__text">関連サイトのバナー予定</span>
+        </div>
+        <div class="sidebar__banner t-label"><img src="img/banner2@2x.png" alt="" width="258" height="94"><span
+            class="banner__text">関連サイトのバナー予定</span>
+        </div>
+        <div class="sidebar__banner t-label"><img src="img/banner3@2x.png" alt="" width="258" height="94"><span
+            class="banner__text">関連サイトのバナー予定</span>
+        </div>
+      </div>
 
       <a class="sidebar__online-store" href="">
         <img class="sidebar__online-store-image" src="img/online-store@2x.png" alt="" width="258" height="80">
@@ -239,20 +248,26 @@
   <footer class="site-footer">
     <div>
       <ul class="site-footer__list">
-        <li class="site-footer__item">トップ</li>
-        <li class="site-footer__item">店舗</li>
-        <li class="site-footer__item">コース一覧</li>
-        <li class="site-footer__item">スタッフ</li>
-        <li class="site-footer__item">お客様の声</li>
-        <li class="site-footer__item">Q&A</li>
-        <li class="site-footer__item">お問合せ</li>
+        <li class="site-footer__item t-button">トップ</li>
+        <li class="site-footer__item t-button">店舗</li>
+        <li class="site-footer__item t-button">コース一覧</li>
+        <li class="site-footer__item t-button">スタッフ</li>
+        <li class="site-footer__item t-button">お客様の声</li>
+        <li class="site-footer__item t-button">Q&A</li>
+        <li class="site-footer__item t-button">お問合せ</li>
       </ul>
     </div>
-    <div>
-      <a href=""></a>
-      <a href=""></a>
+    <div class="site-footer__body">
+      <a class="site-footer__logo" href="">
+        <img class="site-footer__logo-image" src="img/a.svg" alt="" width="300" height="57">
+      </a>
+
+      <a class="site-footer__tel" href="">
+        <img class="site-footer__tel-image" src="img/tel@2x.png" alt="" width="264" height="46">
+      </a>
     </div>
-    <p></p>
+
+    <p class="site-footer__copyright">©Scuba Marine. All Rights Reserved.</p>
   </footer>
 </body>
 
