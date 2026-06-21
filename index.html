@@ -27,12 +27,13 @@
     <div class="site-header__inner">
       <div class="site-header__body">
         <h1 class="site-header__logo">
-          <img src="img/a.svg" alt="">
+          <img class="site-header__logo-image" src="img/a.svg" alt="">
         </h1>
 
         <div class="site-header__actions">
           <a class="site-header__action" href="">
-            <img class="site-header__action-image" src="img/tel@2x.png" alt="" width="264" height="46">
+            <img class="site-header__action-image visible-pc" src="img/tel@2x.png" alt="" width="264" height="46">
+            <img class="site-header__action-image visible-sp" src="img/tel-sp@2x.png" alt="" width="167" height="32">
           </a>
           <a class="site-header__action" href="">
             <img class="site-header__action-image" src="img/reservation@2x.png" alt="" width="335" height="64">
@@ -41,11 +42,23 @@
       </div>
     </div>
 
-    <div class="site-header__mv">
-      <img class="site-header__mv-image" src="img/mv@2x.png" alt="" width="1300" height="346">
+    <div class="site-header__menu visible-sp">
+      <button class="hamburger-button" type="button" aria-label="メニューを開く" aria-controls="global-nav"
+        aria-expanded="false">
+        <span class="hamburger-button__line"></span>
+        <span class="hamburger-button__line"></span>
+        <span class="hamburger-button__line"></span>
+      </button>
     </div>
 
-    <nav class="global-nav">
+    <div class="site-header__mv">
+      <picture>
+        <source media="(max-width: 640px)" srcset="img/mv-sp@2x.png">
+        <img class="site-header__mv-image" src="img/mv@2x.png" alt="" width="1300" height="346">
+      </picture>
+    </div>
+
+    <nav id="global-nav" class="global-nav" aria-hidden="true">
       <ul class="global-nav__list">
         <li class="global-nav__item t-label">トップ</li>
         <li class="global-nav__item t-label">店舗</li>
@@ -67,21 +80,25 @@
           <article class="news__item">
             <time class="news__date t-lead-gray" datetime="">20XX年3月1日</time>
             <p class="news__text">
-              <a class="news__link t-section-title-main" href="">新着タイトルダミーテキスト新着タイトルダミーテキスト</a>
+              <a class="news__link t-section-title-main visible-pc" href="">新着タイトルダミーテキスト新着タイトルダミーテキスト</a>
+              <a class="news__link t-section-title-main visible-sp" href="">タイトルタイトルタイトルタイトルタイトル</a>
+
             </p>
           </article>
 
           <article class="news__item">
             <time class="news__date t-lead-gray" datetime="">20XX年3月1日</time>
             <p class="news__text">
-              <a class="news__link t-section-title-main" href="">新着タイトルダミーテキスト新着タイトルダミーテキスト</a>
+              <a class="news__link t-section-title-main visible-pc" href="">新着タイトルダミーテキスト新着タイトルダミーテキスト</a>
+              <a class="news__link t-section-title-main visible-sp" href="">タイトルタイトルタイトルタイトルタイトル</a>
             </p>
           </article>
 
           <article class="news__item">
             <time class="news__date t-lead-gray" datetime="">20XX年3月1日</time>
             <p class="news__text">
-              <a class="news__link t-section-title-main" href="">新着タイトルダミーテキスト新着タイトルダミーテキスト</a>
+              <a class="news__link t-section-title-main visible-pc" href="">新着タイトルダミーテキスト新着タイトルダミーテキスト</a>
+              <a class="news__link t-section-title-main visible-sp" href="">タイトルタイトルタイトルタイトルタイトル</a>
             </p>
           </article>
         </div>
@@ -172,7 +189,7 @@
         </div>
       </section>
 
-      <div class="contact-area contact-links">
+      <div class="contact-area contact-links visible-pc">
         <a class="contact-links__link" href="">
           <img class="contact-links__image" src="img/tel@2x.png" alt="" width="264" height="46">
         </a>
@@ -189,15 +206,21 @@
 
       <section class="sidebar__section sidebar-movie">
         <h3 class="sidebar__ttl">体験の様子を見る</h3>
-        <iframe width="258" height="157" src="https://www.youtube.com/embed/Frdhx82g9mA?si=KZU06-9kKLtQ4MT_"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="sidebar-movie__video">
+          <iframe width="258" height="157" class="sidebar-movie"
+            src="https://www.youtube.com/embed/z9sn69IZrNE?si=Tc3OXtcb12FgB9cC" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
       </section>
 
-      <section class="sidebar__section shop-info">
+      <section class=" sidebar__section shop-info">
         <h3 class="sidebar__ttl">店舗案内</h3>
-        <img class="shop-info__image" src="img/shop@2x.png" alt="" width="258" height="172">
+        <div class="shop-info__wrap">
+          <img class="shop-info__image" src="img/shop@2x.png" alt="" width="258" height="172">
+        </div>
         <p class="shop-info__tel">098-XXX-XXXX</p>
         <p class="shop-info__address">沖縄県ＸＸＸＸＸＸＸＸＸＸＸ</p>
         <p class="shop-info__hours">営業時間：9:00～18:00</p>
@@ -228,26 +251,43 @@
       </section>
 
       <div class="sidebar__banners">
-        <div class="sidebar__banner t-label"><img src="img/banner1@2x.png" alt="" width="258" height="94"><span
-            class="banner__text">関連サイトのバナー予定</span>
+        <div class="sidebar__banner t-label"><img class="sidebar__banner-image" src="img/banner1@2x.png" alt=""
+            width="258" height="94"><span class="banner__text">関連サイトのバナー予定</span>
         </div>
-        <div class="sidebar__banner t-label"><img src="img/banner2@2x.png" alt="" width="258" height="94"><span
-            class="banner__text">関連サイトのバナー予定</span>
+        <div class="sidebar__banner t-label"><img class="sidebar__banner-image" src="img/banner2@2x.png" alt=""
+            width="258" height="94"><span class="banner__text">関連サイトのバナー予定</span>
         </div>
-        <div class="sidebar__banner t-label"><img src="img/banner3@2x.png" alt="" width="258" height="94"><span
-            class="banner__text">関連サイトのバナー予定</span>
+        <div class="sidebar__banner t-label"><img class="sidebar__banner-image" src="img/banner3@2x.png" alt=""
+            width="258" height="94"><span class="banner__text">関連サイトのバナー予定</span>
         </div>
       </div>
 
       <a class="sidebar__online-store" href="">
         <img class="sidebar__online-store-image" src="img/online-store@2x.png" alt="" width="258" height="80">
       </a>
+
     </aside>
   </div>
 
+  <div>
+
+
+
+  </div>
+
   <footer class="site-footer">
-    <div>
-      <ul class="site-footer__list">
+
+    <div class="visible-sp">
+      <a href="" class="sitefooter__tel">
+        <img src="img/tel@2x.png" alt="">
+      </a>
+      <a href="" class="sitefooter__contact">
+        <img src="img/contact@2x.png" alt="">
+      </a>
+    </div>
+
+    <div class="site-footer__inner">
+      <ul class="site-footer__list visible-pc">
         <li class="site-footer__item t-button">トップ</li>
         <li class="site-footer__item t-button">店舗</li>
         <li class="site-footer__item t-button">コース一覧</li>
@@ -256,18 +296,28 @@
         <li class="site-footer__item t-button">Q&A</li>
         <li class="site-footer__item t-button">お問合せ</li>
       </ul>
-    </div>
-    <div class="site-footer__body">
-      <a class="site-footer__logo" href="">
-        <img class="site-footer__logo-image" src="img/a.svg" alt="" width="300" height="57">
-      </a>
 
-      <a class="site-footer__tel" href="">
-        <img class="site-footer__tel-image" src="img/tel@2x.png" alt="" width="264" height="46">
-      </a>
-    </div>
+      <div class="site-footer__menu visible-sp">
+        <button class="hamburger-button" type="button" aria-label="メニューを開く" aria-controls="global-nav"
+          aria-expanded="false">
+          <span class="hamburger-button__line"></span>
+          <span class="hamburger-button__line"></span>
+          <span class="hamburger-button__line"></span>
+        </button>
+      </div>
 
-    <p class="site-footer__copyright">©Scuba Marine. All Rights Reserved.</p>
+      <div class="site-footer__body">
+        <a class="site-footer__logo-wrap" href="">
+          <img class="site-footer__logo-image" src="img/a.svg" alt="" width="300" height="57">
+        </a>
+
+        <a class="site-footer__tel-wrap" href="">
+          <img class="site-footer__tel-image" src="img/tel@2x.png" alt="" width="264" height="46">
+        </a>
+      </div>
+
+      <p class="site-footer__copyright t-small">©Scuba Marine. All Rights Reserved.</p>
+    </div>
   </footer>
 </body>
 

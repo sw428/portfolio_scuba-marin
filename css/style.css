@@ -144,6 +144,10 @@ a {
 
 /* layout
 --------------------------------*/
+.site-header {
+  max-width: 1600px;
+  margin-inline: auto;
+}
 .container {
   max-width: 1008px;
   margin-inline: auto;
@@ -165,10 +169,6 @@ a {
   flex-shrink: 0;
 }
 
-.site-footer {
-  max-width: 1600px;
-  margin-inline: auto;
-}
 /* Utility
 --------------------------------*/
 .visible-sp {
@@ -183,11 +183,6 @@ a {
 --------------------------------*/
 .page-layout {
   margin-bottom: 140px;
-}
-
-.site-header {
-  max-width: 1600px;
-  margin-inline: auto;
 }
 
 .site-header__lead-text {
@@ -404,7 +399,6 @@ a {
   margin-bottom: 30px;
 }
 
-.shop-info__image,
 .shop-info__tel,
 .shop-info__address {
   margin-bottom: 10px;
@@ -442,7 +436,12 @@ a {
   justify-content: center;
   inset: 0;
 }
-
+/* footer
+--------------------------------*/
+.site-footer {
+  max-width: 1600px;
+  margin-inline: auto;
+}
 .site-footer__list {
   display: flex;
   justify-content: center;
@@ -493,14 +492,274 @@ a {
 .site-footer__copyright {
   text-align: center;
 }
-
+.site-footer__copyright {
+  margin-bottom: 40px;
+}
 /* SP */
 @media screen and (max-width: 640px) {
+  /* Utility
+  --------------------------------*/
   .visible-sp {
     display: block;
   }
 
   .visible-pc {
     display: none;
+  }
+
+  /* Layout
+--------------------------------*/
+  .page-layout__side {
+    width: auto;
+  }
+  .page-layout {
+    display: block;
+    padding: 16px;
+    margin-bottom: 0px;
+  }
+  /* Site-header
+  --------------------------------*/
+  .site-header__lead-text {
+    padding-left: 0px;
+  }
+
+  .site-header__inner {
+    padding-inline: 16px;
+  }
+  .site-header__body {
+    display: block;
+  }
+
+  .site-header__logo {
+    width: min(176px, 100%);
+    margin-inline: auto;
+    margin-bottom: 15.28px;
+  }
+
+  .site-header__logo-image {
+    width: 100%;
+    display: block;
+  }
+
+  .site-header__actions {
+    justify-content: center;
+  }
+
+  .site-header__menu,
+  .site-footer__menu {
+    display: flex;
+    justify-content: flex-end;
+    height: 47px;
+    background-color: var(--color-main);
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .site-header__action {
+    aspect-ratio: 167/32;
+    width: 167px;
+  }
+
+  .site-header__mv {
+    aspect-ratio: 375/175;
+    border: none;
+  }
+
+  /* ハンバーガーメニュー
+--------------------------------*/
+  .hamburger-button {
+    /* 明示的に指定しているのはこの二つのみです */
+    display: grid;
+    gap: 6px;
+    /* ボタンのリセットｃｓｓ */
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .hamburger-button__line {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: white;
+  }
+
+  /* Global-nav
+--------------------------------*/
+  @media screen and (max-width: 640px) {
+    .global-nav {
+      display: none;
+      box-shadow: none;
+      margin-bottom: 0;
+      padding: 16px 24px 22px;
+      background-color: var(--color-white);
+    }
+
+    .global-nav.is-open {
+      display: block;
+    }
+
+    .global-nav__list {
+      display: grid;
+      gap: 8px;
+      max-width: none;
+      padding: 0;
+    }
+
+    .global-nav__item {
+      display: block;
+      width: auto;
+      min-height: auto;
+      border-left: 0;
+    }
+
+    .global-nav__item:last-child {
+      border-right: 0;
+    }
+
+    .global-nav__item a {
+      position: relative;
+      display: inline-block;
+      padding-left: 28px;
+      color: var(--color-text);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .global-nav__item a::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: var(--color-main);
+      transform: translateY(-50%);
+    }
+
+    .global-nav__item a::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 7px;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 7px solid var(--color-white);
+      transform: translateY(-50%);
+    }
+  }
+
+  /* voice
+  --------------------------------*/
+  .voice__item {
+    display: block;
+    padding: 16px;
+  }
+
+  .voice__image-wrap {
+    max-width: 100%;
+    width: calc(100% - 132px);
+    margin-inline: auto;
+    margin-bottom: 16px;
+  }
+
+  .voice__text {
+    margin-bottom: 30px;
+  }
+
+  .sidebar__reservation {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .sidebar__reservation-image {
+    margin-inline: auto;
+  }
+
+  .sidebar-movie__video {
+    aspect-ratio: 343/208;
+    width: 100%;
+  }
+
+  .sidebar-movie {
+    height: 100%;
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .shop-info__wrap {
+    aspect-ratio: 343/228;
+    margin-bottom: 10px;
+  }
+
+  .shop-info__image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .sidebar__banner-image {
+    height: 94px;
+    width: 100%;
+  }
+
+  .sidebar__online-store {
+    aspect-ratio: 343/106;
+    display: block;
+    margin-bottom: 65px;
+  }
+
+  .sidebar__online-store-image {
+    margin-inline: auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .sitefooter__tel {
+    display: block;
+    width: min(264px, 100%);
+    margin-inline: auto;
+    margin-bottom: 20px;
+  }
+
+  .sitefooter__contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(335px, 100%);
+    margin-inline: auto;
+  }
+
+  .site-footer__inner {
+    padding-inline: 16px;
+  }
+
+  .site-footer__menu {
+    margin-bottom: 41px;
+  }
+
+  .sitefooter__contact {
+    margin-bottom: 20px;
+  }
+
+  .site-footer__body {
+    gap: 21.5px;
+  }
+  .site-footer__logo-wrap {
+    min-width: 157px;
+  }
+
+  .site-footer__tel-wrap {
+    min-width: 164px;
+  }
+  .site-footer__copyright {
+    margin-bottom: 35.5px;
   }
 }
