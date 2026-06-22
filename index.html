@@ -11,7 +11,8 @@
   <!-- TODO: favicon未設定。公開前に追加する -->
   <link rel="stylesheet" href="css/style.css">
 
-  <script src="js/menu.js" defer></script>
+  <script src="js/main.js" defer></script>
+
 </head>
 
 <body>
@@ -27,38 +28,53 @@
     <div class="site-header__inner">
       <div class="site-header__body">
         <h1 class="site-header__logo">
-          <img class="site-header__logo-image" src="img/a.svg" alt="">
+          <img class="site-header__logo-image" src="img/a.svg" alt="スキューバ・マリン">
         </h1>
 
         <div class="site-header__actions">
           <a class="site-header__action" href="">
-            <img class="site-header__action-image visible-pc" src="img/tel@2x.png" alt="" width="264" height="46">
-            <img class="site-header__action-image visible-sp" src="img/tel-sp@2x.png" alt="" width="167" height="32">
+            <img class="site-header__action-image visible-pc" src="img/tel@2x.png" alt="電話番号 098-XXX-XXXX（受付時間 9:00〜18:00）" width="264" height="46">
+            <img class="site-header__action-image visible-sp" src="img/tel-sp@2x.png" alt="電話番号 098-XXX-XXXX" width="167" height="32">
           </a>
           <a class="site-header__action" href="">
-            <img class="site-header__action-image" src="img/reservation@2x.png" alt="" width="335" height="64">
+            <img class="site-header__action-image" src="img/reservation@2x.png" alt="ご予約はこちら" width="335" height="64">
           </a>
         </div>
       </div>
     </div>
 
+
     <div class="site-header__menu visible-sp">
-      <button class="hamburger-button" type="button" aria-label="メニューを開く" aria-controls="global-nav"
-        aria-expanded="false">
+      <button class="hamburger-button" type="button" aria-label="メニューを開く" aria-controls="sp-nav" aria-expanded="false">
         <span class="hamburger-button__line"></span>
         <span class="hamburger-button__line"></span>
         <span class="hamburger-button__line"></span>
       </button>
     </div>
 
+
+    <!-- SP用ナビ -->
+    <nav id="sp-nav" class="sp-nav visible-sp" aria-hidden="true">
+      <ul class="sp-nav__list">
+        <li class="sp-nav__item t-label"><a href="">トップ</a></li>
+        <li class="sp-nav__item t-label"><a href="">店舗</a></li>
+        <li class="sp-nav__item t-label"><a href="">コース一覧</a></li>
+        <li class="sp-nav__item t-label"><a href="">スタッフ</a></li>
+        <li class="sp-nav__item t-label"><a href="">お客様の声</a></li>
+        <li class="sp-nav__item t-label"><a href="">Q&amp;A</a></li>
+        <li class="sp-nav__item t-label"><a href="">お問合せ</a></li>
+      </ul>
+    </nav>
+
     <div class="site-header__mv">
       <picture>
         <source media="(max-width: 640px)" srcset="img/mv-sp@2x.png">
-        <img class="site-header__mv-image" src="img/mv@2x.png" alt="" width="1300" height="346">
+        <img class="site-header__mv-image" src="img/mv@2x.png" alt="沖縄の海でウミガメと泳ぐダイバー" width="1300" height="346">
       </picture>
     </div>
 
-    <nav id="global-nav" class="global-nav" aria-hidden="true">
+    <!-- PC用ナビ -->
+    <nav class="global-nav visible-pc">
       <ul class="global-nav__list">
         <li class="global-nav__item t-label">トップ</li>
         <li class="global-nav__item t-label">店舗</li>
@@ -119,17 +135,17 @@
         <ul class="course__list">
           <li class="course__item">
             <a class="course__link" href="">
-              <img class="course__image" src="img/course1@2x.png" alt="" width="232" height="260">
+              <img class="course__image" src="img/course1@2x.png" alt="初めてのスキューバダイビング 入門コースの詳細を見る" width="232" height="260">
             </a>
           </li>
           <li class="course__item">
             <a class="course__link" href="">
-              <img class="course__image" src="img/course2@2x.png" alt="" width="232" height="260">
+              <img class="course__image" src="img/course2@2x.png" alt="青の洞窟を自由に散策 青の洞窟コースの詳細を見る" width="232" height="260">
             </a>
           </li>
           <li class="course__item">
             <a class="course__link" href="">
-              <img class="course__image" src="img/course3@2x.png" alt="" width="232" height="260">
+              <img class="course__image" src="img/course3@2x.png" alt="丸1日沖縄の海を楽しめる 1日フリーコースの詳細を見る" width="232" height="260">
             </a>
           </li>
         </ul>
@@ -141,7 +157,7 @@
         <div class="voice__list">
           <article class="voice__item">
             <div class="voice__image-wrap">
-              <img class="voice__image" src="img/voice1@2x.png" alt="">
+              <img class="voice__image" src="img/voice1@2x.png" alt="ウミガメと泳ぐダイバー">
             </div>
 
             <div class="voice__body">
@@ -157,7 +173,7 @@
 
           <article class="voice__item">
             <div class="voice__image-wrap">
-              <img class="voice__image" src="img/voice2@2x.png" alt="">
+              <img class="voice__image" src="img/voice2@2x.png" alt="プールサイドに座る二人のダイバー">
             </div>
 
             <div class="voice__body">
@@ -173,7 +189,7 @@
 
           <article class="voice__item">
             <div class="voice__image-wrap">
-              <img class="voice__image" src="img/voice3@2x.png" alt="">
+              <img class="voice__image" src="img/voice3@2x.png" alt="水中でOKサインを出すダイバー">
             </div>
 
             <div class="voice__body">
@@ -191,17 +207,17 @@
 
       <div class="contact-area contact-links visible-pc">
         <a class="contact-links__link" href="">
-          <img class="contact-links__image" src="img/tel@2x.png" alt="" width="264" height="46">
+          <img class="contact-links__image" src="img/tel@2x.png" alt="電話番号 098-XXX-XXXX（受付時間 9:00〜18:00）" width="264" height="46">
         </a>
         <a class="contact-links__link" href="">
-          <img class="contact-links__image" src="img/contact@2x.png" alt="" width="335" height="64">
+          <img class="contact-links__image" src="img/contact@2x.png" alt="お問い合わせはこちら" width="335" height="64">
         </a>
       </div>
     </main>
 
     <aside class="page-layout__side sidebar">
       <a class="sidebar__reservation" href="">
-        <img class="sidebar__reservation-image" src="img/reservation@2x.png" alt="" width="335" height="64">
+        <img class="sidebar__reservation-image" src="img/reservation@2x.png" alt="ご予約はこちら" width="335" height="64">
       </a>
 
       <section class="sidebar__section sidebar-movie">
@@ -219,7 +235,7 @@
       <section class=" sidebar__section shop-info">
         <h3 class="sidebar__ttl">店舗案内</h3>
         <div class="shop-info__wrap">
-          <img class="shop-info__image" src="img/shop@2x.png" alt="" width="258" height="172">
+          <img class="shop-info__image" src="img/shop@2x.png" alt="青い扉が並ぶスキューバ・マリンの店舗外観" width="258" height="172">
         </div>
         <p class="shop-info__tel">098-XXX-XXXX</p>
         <p class="shop-info__address">沖縄県ＸＸＸＸＸＸＸＸＸＸＸ</p>
@@ -263,7 +279,7 @@
       </div>
 
       <a class="sidebar__online-store" href="">
-        <img class="sidebar__online-store-image" src="img/online-store@2x.png" alt="" width="258" height="80">
+        <img class="sidebar__online-store-image" src="img/online-store@2x.png" alt="オンラインストアを見る" width="258" height="80">
       </a>
 
     </aside>
@@ -279,10 +295,10 @@
 
     <div class="visible-sp">
       <a href="" class="sitefooter__tel">
-        <img src="img/tel@2x.png" alt="">
+        <img src="img/tel@2x.png" alt="電話番号 098-XXX-XXXX（受付時間 9:00〜18:00）">
       </a>
       <a href="" class="sitefooter__contact">
-        <img src="img/contact@2x.png" alt="">
+        <img src="img/contact@2x.png" alt="お問い合わせはこちら">
       </a>
     </div>
 
@@ -298,7 +314,7 @@
       </ul>
 
       <div class="site-footer__menu visible-sp">
-        <button class="hamburger-button" type="button" aria-label="メニューを開く" aria-controls="global-nav"
+        <button class="hamburger-button" type="button" aria-label="メニューを開く" aria-controls="site-footer-menu"
           aria-expanded="false">
           <span class="hamburger-button__line"></span>
           <span class="hamburger-button__line"></span>
@@ -306,13 +322,25 @@
         </button>
       </div>
 
+      <nav id="site-footer-menu" class="sp-nav visible-sp" aria-hidden="true">
+        <ul class="sp-nav__list">
+          <li class="sp-nav__item t-label"><a href="">トップ</a></li>
+          <li class="sp-nav__item t-label"><a href="">店舗</a></li>
+          <li class="sp-nav__item t-label"><a href="">コース一覧</a></li>
+          <li class="sp-nav__item t-label"><a href="">スタッフ</a></li>
+          <li class="sp-nav__item t-label"><a href="">お客様の声</a></li>
+          <li class="sp-nav__item t-label"><a href="">Q&amp;A</a></li>
+          <li class="sp-nav__item t-label"><a href="">お問合せ</a></li>
+        </ul>
+      </nav>
+
       <div class="site-footer__body">
         <a class="site-footer__logo-wrap" href="">
-          <img class="site-footer__logo-image" src="img/a.svg" alt="" width="300" height="57">
+          <img class="site-footer__logo-image" src="img/a.svg" alt="スキューバ・マリン トップページ" width="300" height="57">
         </a>
 
         <a class="site-footer__tel-wrap" href="">
-          <img class="site-footer__tel-image" src="img/tel@2x.png" alt="" width="264" height="46">
+          <img class="site-footer__tel-image" src="img/tel@2x.png" alt="電話番号 098-XXX-XXXX（受付時間 9:00〜18:00）" width="264" height="46">
         </a>
       </div>
 
