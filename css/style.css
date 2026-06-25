@@ -663,6 +663,10 @@ a {
     padding: 16px;
   }
 
+  .voice__image {
+    margin-inline: auto;
+  }
+
   .voice__image-wrap {
     width: calc(100% - 132px);
     max-width: 100%;
